@@ -6,7 +6,7 @@ function handleSubmit(e) {
   e.preventDefault();
   const {
     elements: { email, password },
-  } = e.currentTarget;
+  } = e.target;
 
   if (email.value === "" || password.value === "") {
     return alert("Fill all fields, right now!!!");
@@ -17,5 +17,5 @@ function handleSubmit(e) {
     password: password.value,
   };
   console.log(account);
-  e.currentTarget.reset();
+  e.target.reset();
 }
