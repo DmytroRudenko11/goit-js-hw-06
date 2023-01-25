@@ -16,6 +16,7 @@ function createButtonHandler() {
 }
 
 function createBoxes(amount) {
+  const boxes = [];
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
 
@@ -26,8 +27,9 @@ function createBoxes(amount) {
     box.style.height = size + "px";
     box.style.width = size + "px";
 
-    renderDiv.append(box);
+    boxes.push(box);
   }
+  renderDiv.append(...boxes);
 }
 
 function deleteBoxes() {
